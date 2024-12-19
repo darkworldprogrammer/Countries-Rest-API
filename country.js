@@ -1,4 +1,6 @@
 const countryName = new URLSearchParams(location.search).get("name");
+const backButton = document.querySelector(".back-button");
+const nextButton = document.querySelector(".next-button");
 const countryContainer = document.querySelector(".country-details");
 const flagImg = document.querySelector(".flag");
 const countryNames = document.querySelector(".country-name");
@@ -121,3 +123,10 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
   .catch((err) => {
     console.dir(err);
   });
+
+  backButton.addEventListener('click',(back) =>{
+    history.back()
+  })
+  nextButton.addEventListener('click',(back) =>{
+    history.forward()
+  })

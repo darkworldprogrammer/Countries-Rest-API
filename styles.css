@@ -4,7 +4,11 @@
 body,h1,h2,h3,h4,h5{
     margin: 0;
     font-family: "nunito",sans-serif;
+    max-width: 2200px;
+    /* display: flex; */
+    margin: 0 auto;
 }
+
 a{
     text-decoration-line: none;
     color: inherit;

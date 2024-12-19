@@ -2,9 +2,22 @@ main {
   margin-top: 28px;
   padding-inline: 28px;
 }
-.back-button {
+.button {
+  display: flex;
+  justify-content: space-between;
+}
+.back-button,
+.next-button {
   box-shadow: 0 0 2px 1px;
   padding: 4px;
+  transition: all 0.4s ease-in-out;
+}
+.back-button:hover,
+.next-button:hover {
+  background-color: cyan;
+  border-radius: 10px;
+  box-shadow: 2px 0 5px 1px;
+  transform: scale(1.02);
 }
 .country-details {
   display: flex;
@@ -17,14 +30,15 @@ main {
   height: 800px;
   width: 100%;
 }
-.country-name{
+.country-name {
   font-size: 48px;
 }
 .all-details {
   display: flex;
-  gap: 10px;
+  gap: 60px;
 }
-.text-first,.text-second{
+.text-first,
+.text-second {
   font-size: 24px;
   font-weight: normal;
 }
@@ -45,15 +59,20 @@ main {
 .borders .border {
   box-shadow: 0 0 4px 1px;
   padding: 10px 15px;
+  font-size: 16.5px;
+  transition: all 0.4s ease-in-out;
 }
-
+.borders .border:hover {
+  transform: scale(1.01);
+}
 @media (max-width: 1400px) {
   .country-details img {
     max-width: 500px;
     height: 500px;
     width: 100%;
   }
-  .text-first,.text-second{
+  .text-first,
+  .text-second {
     font-size: 22px;
   }
 }
@@ -63,7 +82,8 @@ main {
     height: 300px;
     width: 100%;
   }
-  .text-first,.text-second{
+  .text-first,
+  .text-second {
     font-size: 20px;
   }
 }
@@ -74,7 +94,7 @@ main {
     max-height: 600px;
     height: 100%;
   }
-  .country-name{
+  .country-name {
     font-size: 38px;
   }
   .country-details {
@@ -83,9 +103,11 @@ main {
     align-items: start;
   }
   .all-details {
-    flex-direction: column;
+    flex-direction: row;
+    gap: 50px;
   }
-  .text-first,.text-second{
+  .text-first,
+  .text-second {
     font-size: 17px;
   }
   .border-country {
@@ -96,5 +118,15 @@ main {
     gap: 15px;
     display: flex;
     flex-direction: row;
+  }
+  .borders .border {
+    font-size: 14px;
+    padding: 4px 6px;
+  }
+}
+@media (max-width: 768px){
+  .all-details{
+    flex-direction: column;
+    gap: 10px;
   }
 }
