@@ -14,44 +14,68 @@ main {
 }
 .country-details img {
   max-width: 900px;
+  height: 800px;
   width: 100%;
+}
+.country-name{
+  font-size: 48px;
 }
 .all-details {
   display: flex;
   gap: 10px;
 }
+.text-first,.text-second{
+  font-size: 24px;
+  font-weight: normal;
+}
 .border-country {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   gap: 15px;
 }
 .border-country h2 {
   padding: 0;
   margin: 0;
 }
-.border-country .p {
+.border-country .borders {
   display: flex;
+  flex-wrap: wrap;
   gap: 28px;
 }
-.border-country .border1 {
+.borders .border {
   box-shadow: 0 0 4px 1px;
+  padding: 10px 15px;
 }
-.border-country .border2 {
-  box-shadow: 0 0 4px 1px;
-}
-.border-country .border3 {
-  box-shadow: 0 0 4px 1px;
-}
-@media (max-width: 1150px) {
+
+@media (max-width: 1400px) {
   .country-details img {
     max-width: 500px;
+    height: 500px;
     width: 100%;
+  }
+  .text-first,.text-second{
+    font-size: 22px;
+  }
+}
+@media (max-width: 1180px) {
+  .country-details img {
+    max-width: 300px;
+    height: 300px;
+    width: 100%;
+  }
+  .text-first,.text-second{
+    font-size: 20px;
   }
 }
 @media (max-width: 1000px) {
   .country-details img {
-    max-width: 600px;
+    max-width: 100vw;
     width: 100%;
+    max-height: 600px;
+    height: 100%;
+  }
+  .country-name{
+    font-size: 38px;
   }
   .country-details {
     flex-direction: column;
@@ -61,11 +85,14 @@ main {
   .all-details {
     flex-direction: column;
   }
+  .text-first,.text-second{
+    font-size: 17px;
+  }
   .border-country {
     flex-direction: column;
     align-items: start;
   }
-  .border-country .p {
+  .border-country .borders {
     gap: 15px;
     display: flex;
     flex-direction: row;
